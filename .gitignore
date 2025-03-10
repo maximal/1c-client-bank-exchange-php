@@ -1,0 +1,10 @@
+# Editor directories and files
+/.vscode/*
+!/.vscode/extensions.json
+/.idea
+
+/vendor
+
+mail.php
+Выписка.txt
+Выписка_*.txt

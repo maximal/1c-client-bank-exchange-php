@@ -1,0 +1,25 @@
+{
+	"name": "maximal/1c-client-bank-exchange",
+	"description": "A library for parsing 1C Client Bank Exchange format.",
+	"type": "library",
+	"license": "MIT",
+	"authors": [
+		{
+			"name": "maximal",
+			"email": "almaximal@ya.ru"
+		}
+	],
+	"require": {
+		"php": ">=8.3",
+		"ext-iconv": "*",
+		"ext-mbstring": "*",
+		"ext-pcre": "*"
+	},
+	"minimum-stability": "stable",
+	"prefer-stable": true,
+	"autoload": {
+		"psr-4": {
+			"Maximal\\ClientBankExchange1C\\": "src/"
+		}
+	}
+}
