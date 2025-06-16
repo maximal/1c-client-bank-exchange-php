@@ -114,4 +114,164 @@ final class DocumentSection extends Section
 	{
 		return $this->getField('НазначениеПлатежа');
 	}
+
+	/**
+	 * Плательщик (ИНН и наименование плательщика)
+	 *
+	 * @api
+	 */
+	public function getPayer(): ?string
+	{
+		return $this->getField('Плательщик');
+	}
+
+	/**
+	 * ИНН плательщика (строка 12 символов)
+	 *
+	 * @api
+	 */
+	public function getPayerInn(): ?string
+	{
+		return $this->getField('ПлательщикИНН');
+	}
+
+	/**
+	 * Наименование плательщика
+	 *
+	 * @api
+	 */
+	public function getPayerName(): ?string
+	{
+		return $this->getField('Плательщик1');
+	}
+
+	/**
+	 * Расчетный счет плательщика (строка 20 символов)
+	 *
+	 * @api
+	 */
+	public function getPayerAccount(): ?string
+	{
+		return $this->getField('Плательщик2');
+	}
+
+	/**
+	 * Расчетный счет плательщика в его банке, независимо от того, прямые расчеты у этого банка или нет
+	 *
+	 * @api
+	 */
+	public function getPayerAccountReal(): ?string
+	{
+		return $this->getField('ПлательщикСчет');
+	}	
+
+	/**
+	 * Банк плательщика
+	 *
+	 * @api
+	 */
+	public function getPayerBank(): ?string
+	{
+		return $this->getField('ПлательщикБанк1');
+	}
+
+	/**
+	 * БИК банка плательщика
+	 *
+	 * @api
+	 */
+	public function getPayerBic(): ?string
+	{
+		return $this->getField('ПлательщикБИК');
+	}
+
+	/**
+	 * Кор счет банка плательщика (строка 20 символов)
+	 *
+	 * @api
+	 */
+	public function getPayerCorrAccount(): ?string
+	{
+		return $this->getField('ПлательщикКорсчет');
+	}
+
+	/**
+	 * Получатель (ИНН и наименование плательщика)
+	 *
+	 * @api
+	 */
+	public function getRecipient(): ?string
+	{
+		return $this->getField('Получатель');
+	}
+
+	/**
+	 * ИНН получателя (строка 12 символов)
+	 *
+	 * @api
+	 */
+	public function getRecipientInn(): ?string
+	{
+		return $this->getField('ПолучательИНН');
+	}
+
+	/**
+	 * Наименование получателя
+	 *
+	 * @api
+	 */
+	public function getRecipientName(): ?string
+	{
+		return $this->getField('Получатель1');
+	}
+
+	/**
+	 * Расчетный счет получтеля (строка 20 символов)
+	 *
+	 * @api
+	 */
+	public function getRecipientAccount(): ?string
+	{
+		return $this->getField('Получатель2');
+	}
+
+	/**
+	 * Расчетный счет получтеля в его банке, независимо от того, прямые расчеты у этого банка или нет
+	 *
+	 * @api
+	 */
+	public function getPayerRecipientReal(): ?string
+	{
+		return $this->getField('ПолучательСчет');
+	}
+
+	/**
+	 * Банк получтеля
+	 *
+	 * @api
+	 */
+	public function getRecipientBank(): ?string
+	{
+		return $this->getField('ПолучательБанк1');
+	}
+
+	/**
+	 * БИК банка получтеля
+	 *
+	 * @api
+	 */
+	public function getRecipientBic(): ?string
+	{
+		return $this->getField('ПолучательБИК');
+	}
+
+	/**
+	 * Кор счет банка получтеля (строка 20 символов)
+	 *
+	 * @api
+	 */
+	public function getRecipientCorrAccount(): ?string
+	{
+		return $this->getField('ПолучательКорсчет');
+	}	
 }
