@@ -82,6 +82,18 @@ final class DocumentSection extends Section
 	}
 
 	/**
+	 * Дата поступления
+	 *
+	 * @throws DateInvalidTimeZoneException
+	 *
+	 * @api
+	 */
+	public function getReceiptDate(string|DateTimeZone $timezone = 'MSK'): ?DateTimeImmutable
+	{
+		return $this->getDateField('ДатаПоступило', $timezone);
+	}
+
+	/**
 	 * Сумма с плавающей точкой (рубли, доллары, ...)
 	 *
 	 * @see getAmountFixed()
@@ -163,7 +175,7 @@ final class DocumentSection extends Section
 	public function getPayerAccountReal(): ?string
 	{
 		return $this->getField('ПлательщикСчет');
-	}	
+	}
 
 	/**
 	 * Банк плательщика
@@ -273,5 +285,5 @@ final class DocumentSection extends Section
 	public function getRecipientCorrAccount(): ?string
 	{
 		return $this->getField('ПолучательКорсчет');
-	}	
+	}
 }
