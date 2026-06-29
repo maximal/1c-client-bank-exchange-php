@@ -148,6 +148,16 @@ final class DocumentSection extends Section
 	}
 
 	/**
+	 * КПП плательщика
+	 *
+	 * @api
+	 */
+	public function getPayerKpp(): ?string
+	{
+		return $this->getField('ПлательщикКПП');
+	}
+
+	/**
 	 * Наименование плательщика
 	 *
 	 * @api
@@ -225,6 +235,16 @@ final class DocumentSection extends Section
 	public function getRecipientInn(): ?string
 	{
 		return $this->getField('ПолучательИНН');
+	}
+
+	/**
+	 * КПП получателя
+	 *
+	 * @api
+	 */
+	public function getRecipientKpp(): ?string
+	{
+		return $this->getField('ПолучательКПП');
 	}
 
 	/**
